@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+}
+
+.stopwatch {
+    width: 90%;
+    max-width: 500px;
+    padding: 45px 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.stopwatch h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#display {
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#start {
+    background: #00d4ff;
+    color: #111;
+}
+
+#pause {
+    background: #ffd166;
+    color: #111;
+}
+
+#reset {
+    background: #ff6b6b;
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .stopwatch {
+        padding: 35px 20px;
+    }
+
+    .stopwatch h1 {
+        font-size: 32px;
+    }
+
+    #display {
+        font-size: 40px;
+    }
+
+    .buttons button {
+        padding: 11px 20px;
+    }
+}
+#lap {
+    background: #06d6a0;
+    color: #111;
+}
+
+#laps {
+    width: 100%;
+    max-height: 220px;
+    margin-top: 30px;
+    padding-right: 5px;
+    overflow-y: auto;
+}
+
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    margin-bottom: 8px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+    font-size: 15px;
+}
+#laps::-webkit-scrollbar {
+    width: 5px;
+}
+
+#laps::-webkit-scrollbar-thumb {
+    background: #00d4ff;
+    border-radius: 10px;
+}
+#status {
+    margin-top: -20px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #00d4ff;
+    font-weight: bold;
+}
